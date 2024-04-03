@@ -10,11 +10,11 @@ def list_split(items, n):
 class handler(BaseHTTPRequestHandler):
     def do_GET(self):
         # 2024-03-15 规范接口的传参方式 https://github.com/Zfour/python_github_calendar_api/issues/20#issuecomment-1999115747
-        path = self.path
-        spl=path.split('?')[1:]
-        for kv in spl:
-            key,user=kv.split("=")
-            if key=="user": break
+        # path = self.path
+        # spl=path.split('?')[1:]
+        # for kv in spl:
+        #     key,user=kv.split("=")
+        #     if key=="user": break
         # 把getdata(user)改为自己的用户名写死就好了
         data = 'icewolf-li'
         self.send_response(200)
